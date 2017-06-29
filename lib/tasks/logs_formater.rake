@@ -10,9 +10,9 @@
 # rake test['hello', 'Li']
 # {arg1: 'hello', arg2: 'Li'}
 
-namespace 'details_parse' do
-  desc 'an task'
-  task 'detail task' => :environment do
-    p DetailsParse::Railtie.config.logs_formater.enable
+namespace 'logs_formater' do
+  desc 'Toggle gem'
+  task :toggle => :environment do
+    p LogsFormater::Railtie.config.logs_formater.enable
   end
 end
